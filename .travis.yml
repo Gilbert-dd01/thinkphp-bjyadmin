@@ -1,0 +1,18 @@
+language: php
+php: 7.0
+
+install: composer install
+script: composer test || true
+
+cache:
+  directories:
+    - $HOME/.composer/cache/files
+
+group: stable
+dist: trusty
+os: linux
+
+branches:
+  only:
+    - master
+    - /^development.*/
